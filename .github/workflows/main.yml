@@ -12,6 +12,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+      ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION: true
     
     steps:
     
@@ -53,6 +54,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+      ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION: true
 
     steps:    
     
@@ -73,6 +75,7 @@ jobs:
       env:
         USERNAME: ${{ secrets.USERNAME }}
         PASSWORD: ${{ secrets.PASSWORD }}
+        ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION: true
       run: |
         artifactName=$(ls *.jar | head -1)
         mvn deploy -DmuleDeploy \
