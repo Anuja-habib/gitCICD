@@ -94,5 +94,4 @@ jobs:
         mvn deploy -DskipMunitTests -DmuleDeploy \
          -Dmule.artifact=$artifactName \
          -Danypoint.username="$USERNAME" \
-         -Danypoint.password="$PASSWORD" \
-         -Ddecryption.key="$KEY"
+         -Danypoint.password="$PASSWORD" 
