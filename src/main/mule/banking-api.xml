@@ -359,7 +359,8 @@ output application/json
                 <ee:set-variable variableName="transactionId">attributes.uriParams.'transactionId'</ee:set-variable>
             </ee:variables>
         </ee:transform>
-        <ee:transform doc:name="Transform Message">
+        <logger level="INFO" doc:name="Logger" doc:id="c11df40a-3266-4148-bdd7-169422bb1cb2" message="Hey"/>
+		<ee:transform doc:name="Transform Message">
             <ee:message>
                 <ee:set-payload><![CDATA[%dw 2.0
 output application/json
